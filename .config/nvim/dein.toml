@@ -1,0 +1,30 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+[[plugins]]
+repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+merged = 0
+rev = 'release'
+
+[[plugins]]
+repo = 'leafOfTree/vim-svelte-plugin'
+on_ft = ['svelte']
+
