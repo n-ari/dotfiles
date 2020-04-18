@@ -145,5 +145,6 @@ export QT_IM_MODULE=fcitx
 source /usr/share/nvm/init-nvm.sh
 
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+PATH="$(yarn global bin):$PATH"
 
 exec fish

@@ -32,6 +32,4 @@ syntax enable
 " coc.nvim
 source ~/.config/nvim/coc.vim
 
-" nerdtree
-nnoremap <silent> <C-e> :NERDTreeToggle<CR>
 
