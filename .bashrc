@@ -144,6 +144,8 @@ export QT_IM_MODULE=fcitx
 
 source /usr/share/nvm/init-nvm.sh
 
+export GOPATH=$HOME/go
+PATH=$PATH:$GOPATH/bin
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 PATH="$(yarn global bin):$PATH"
 
