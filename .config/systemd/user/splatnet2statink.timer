@@ -1,0 +1,10 @@
+[Unit]
+Description=splatnet2statink
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=1hour
+
+[Install]
+WantedBy=timers.target
+

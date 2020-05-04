@@ -1,0 +1,10 @@
+[Unit]
+Description=splatnet2statink
+RefuseManualStart=no
+RefuseManualStop=yes
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python /opt/splatnet2statink/splatnet2statink.py -r
+ExecStartPost=/usr/bin/python /opt/splatnet2statink/splatnet2statink.py -r --salmon
+

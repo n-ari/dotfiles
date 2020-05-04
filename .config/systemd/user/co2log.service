@@ -1,0 +1,10 @@
+[Unit]
+Description=CO2 logging script
+
+[Service]
+WorkingDirectory=/opt/env-logger/
+ExecStart=/usr/bin/env ruby /opt/env-logger/co2.rb
+
+[Install]
+WantedBy=default.target
+
