@@ -1,3 +1,5 @@
 [user]
 	name = n-ari
 	email = fukunari.r.aa@m.titech.ac.jp
+[core]
+	editor = nvim
