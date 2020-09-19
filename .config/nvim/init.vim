@@ -21,6 +21,8 @@ set wrapscan
 set hlsearch
 nnoremap <F3> :noh<CR>
 set clipboard+=unnamedplus
+set exrc
+set secure
 
 " dein.vim
 source ~/.config/nvim/dein.vim
