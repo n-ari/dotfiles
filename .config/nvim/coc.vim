@@ -112,3 +112,6 @@ nmap <silent> <space>rf <Plug>(coc-references)
 nmap <silent> <space>rn <Plug>(coc-rename)
 nmap <silent> <space>fmt <Plug>(coc-format)
 
+" grep
+nnoremap <silent> <space>to :exe 'CocList -I --input=TODO grep'<CR>
+
