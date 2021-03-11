@@ -20,9 +20,28 @@ set incsearch
 set wrapscan
 set hlsearch
 nnoremap <F3> :noh<CR>
-set clipboard+=unnamedplus
 set exrc
 set secure
+
+let g:loaded_sql_completion = 0
+
+" clipboard
+if system('uname -a | grep Microsoft') != ""
+  let g:clipboard = {
+    \   'name': 'myClipboard',
+    \   'copy': {
+    \      '+': 'win32yank.exe -i',
+    \      '*': 'win32yank.exe -i',
+    \    },
+    \   'paste': {
+    \      '+': 'win32yank.exe -o',
+    \      '*': 'win32yank.exe -o',
+    \   },
+    \   'cache_enabled': 1,
+    \ }
+else
+  set clipboard+=unnamedplus
+endif
 
 " dein.vim
 source ~/.config/nvim/dein.vim
@@ -34,4 +53,6 @@ syntax enable
 " coc.nvim
 source ~/.config/nvim/coc.vim
 
+" format
+nnoremap <silent> <Space>ff gg=G<C-o>
 

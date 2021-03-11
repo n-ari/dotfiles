@@ -142,11 +142,19 @@ export GTK_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
 
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export GOPATH=$HOME/go
 PATH=$PATH:$GOPATH/bin
+
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
 PATH="$(yarn global bin):$PATH"
 
+PATH="$HOME/.cargo/bin:$PATH"
+
 exec fish
+

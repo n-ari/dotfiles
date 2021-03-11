@@ -110,8 +110,19 @@ nmap <silent> <space>im <Plug>(coc-implementation)
 nmap <silent> <space>rf <Plug>(coc-references)
 " edit
 nmap <silent> <space>rn <Plug>(coc-rename)
-nmap <silent> <space>fmt <Plug>(coc-format)
+nmap <silent> <space>fmt <Plug>(coc-format)gg=G<C-o>
 
 " grep
 nnoremap <silent> <space>to :exe 'CocList -I --input=TODO grep'<CR>
 
+" floating
+hi CocFloating ctermbg=240
+
+" scss
+autocmd FileType scss setl iskeyword+=@-@
+
+" hover scroll
+nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+inoremap <nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
